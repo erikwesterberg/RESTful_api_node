@@ -18,6 +18,8 @@
   "homepage": "https://github.com/erikwesterberg/RESTful_api_node#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "nodemon": "^1.19.0"
+    "mongoose": "^5.9.4",
+    "nodemon": "^1.19.0",
+    "dotenv": "^8.0.0"
   }
 }

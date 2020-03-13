@@ -1,5 +1,7 @@
 const express = require('express');
 const app = express();
+const mongoose = require('mongoose');
+require('dotenv/config')
 
 //Middlewares 
 app.use('/posts', () => {
@@ -14,5 +16,10 @@ app.get('/', (req, res) => {
 app.get('/posts', (req, res) => {
   res.send('We are on posts');
 })
+
+//Connect to db
+mongoose.connect(process.env.MONGODB_KEY_CONNECTION, 
+{ useNewUrlParser: true }, 
+() => console.log('Connected to db'))
 
 app.listen(3000);
