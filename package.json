@@ -1,0 +1,23 @@
+{
+  "name": "restfulapi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/erikwesterberg/RESTful_api_node.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/erikwesterberg/RESTful_api_node/issues"
+  },
+  "homepage": "https://github.com/erikwesterberg/RESTful_api_node#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^1.19.0"
+  }
+}
