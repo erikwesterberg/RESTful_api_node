@@ -1,14 +1,23 @@
 const express = require('express');
-
 const router = express.Router();
+const Post = require('../models/Post')
 
-app.get('/', (req, res) => {
+router.get('/', (req, res) => {
   res.send('We are on posts');
 });
 
-app.get('/specifik', (req, res) => {
-  res.send('We are on a specifik posts');
-});
-
+router.post('/', (req, res) => {
+  const post = new Post({
+    title: req.body.title,
+    description: req.body.description
+  });
+  try {
+    const savedPost = post.save();
+    res.json(savedPost);
+  }
+  catch(err) {
+      res.json({ message: err })
+    }
+  })
 
 module.exports = router;
